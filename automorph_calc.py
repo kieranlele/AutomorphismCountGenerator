@@ -67,12 +67,12 @@ def aut(tree):
         ind_1 = tree.index(1)
         m = tree.index(1, ind_1 + 1)
         L1 = [tree[i] - 1 for i in range(1, m)]
-        aut_L1 = calc_aut(L1)
+        aut_L1 = aut(L1)
         num = aut_L1 * aut_L1 * 2
     return num
 
 
 if __name__ == '__main__':
-    tree = [0, 1, 2, 3, 3, 3, 2, 1, 2, 2, 1, 2, 2]
+    tree = [0, 1, 2, 2, 2, 2, 1, 2, 2, 2]
     fin = aut(tree)
     print("fin", fin)
